@@ -1,7 +1,7 @@
 const express = require('express'); //express 모듈 불러오기
 const cors = require('cors'); //cors 모듈 불러오기
 const database = require('./database/database');
-const PORT = '8080';
+const PORT = '8081';
 
 const app = express(); // express 모듈을 사용하기 위해 app 변수에 할당한다.
 
@@ -29,5 +29,6 @@ app.get('/', (requse, response) => {
 // });
 
 app.use(require('./routes/getroutes'));
+app.use(require('./routes/postRoutes'));
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`)); //서버 실행시 메시지
