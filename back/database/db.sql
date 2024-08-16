@@ -20,3 +20,8 @@ SELECT * FROM task
 
 -- 특정 사용자 데이터 필터 조회
 SELECT * FROM task WHERE userId = 'taehyuntech'
+
+-- 데이터 삭제
+DELETE FROM task WHERE _id = '12345';
+
+UPDATE task SET iscompleted = false WHERE _id = '8a8ad391-af0c-42db-b97f-86bf04d615d4';
